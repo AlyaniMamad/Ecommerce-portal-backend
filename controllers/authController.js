@@ -8,15 +8,15 @@ export const registerController = async (req, res) => {
 
         //add some validation over here
         if (!name) {
-            return res.send({error:'Name Must be Required'})
+            return res.send({message:'Name Must be Required'})
         }if (!email) {
-            return res.send({error:'Email Must be Required'})
+            return res.send({message:'Email Must be Required'})
         }if (!password) {
-            return res.send({error:'password Must be Required'})
+            return res.send({message:'password Must be Required'})
         }if (!phone) {
-            return res.send({error:'phone Must be Required'})
+            return res.send({message:'phone Must be Required'})
         }if (!address) {
-            return res.send({error:'address Must be Required'})
+            return res.send({message:'address Must be Required'})
         }
 
         const existingUser = await userModel.findOne({ email });
@@ -24,9 +24,8 @@ export const registerController = async (req, res) => {
         //check if user already login (existing user)
         if (existingUser) {
             return res.status(200).send({
-                success: true,
+                success: false,
                 message: 'Alredy Register so Login Now',
-                error
             })
         }
 
