@@ -9,7 +9,6 @@ import cors from 'cors'
 //configuration 
 dotenv.config();
 
-
 //database connection
 connectDB();
 
