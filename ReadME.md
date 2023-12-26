@@ -29,4 +29,11 @@ start implementation navigation menu using bootstrap block
 
 start implementation admin & user dashboard
 
+create a categoryModels and write down all database document schema
+create a cateforyRoutes and listed all routes here
+create a categoryController to write down behind logic part
+
+create a productModel and write down all database document schema
+create a productRoutes and listed all routes here
+create a productController to write down behind logic part
  -->
