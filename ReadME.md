@@ -36,4 +36,18 @@ create a categoryController to write down behind logic part
 create a productModel and write down all database document schema
 create a productRoutes and listed all routes here
 create a productController to write down behind logic part
+
+Read a productModel and write down all database document schema
+Read a productRoutes and listed all routes here
+Read a productController to write down behind logic part
+
+Update a productModel and write down all database document schema
+Update a productRoutes and listed all routes here
+Update a productController to write down behind logic part
+
+Delete a productModel and write down all database document schema
+Delete a productRoutes and listed all routes here
+Delete a productController to write down behind logic part
+
+
  -->
