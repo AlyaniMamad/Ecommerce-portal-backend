@@ -7,6 +7,8 @@ npm install nodemon (auto detect changes)
 npm i morgan dotenv (morgan gives the information about which APIs are called or hit)
 
 npm i mongoose
+create a .env file in root directory
+define the database url in .env file (MONGODB_URI={copy from mongodb compass or atlas})
 connect MongoDB database to nodejs (config/db.js)
 
 make follow MVC Pattern
