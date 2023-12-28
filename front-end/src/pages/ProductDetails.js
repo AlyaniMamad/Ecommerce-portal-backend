@@ -30,6 +30,7 @@ const ProductDetails = () => {
   const getSimilarProduct = async (pid, cid) => {
     try {
       const { data } = await axios.get(
+        // http://localhost:8080/api/v1/product/related-product/658c2049ec02bf642e4e3301/658c1ee0ec02bf642e4e32c6
         `${process.env.REACT_APP_API}/api/v1/product/related-product/${pid}/${cid}`
       );
       setRelatedProducts(data?.products);
@@ -45,8 +46,8 @@ const ProductDetails = () => {
             src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${product._id}`}
             className="card-img-top"
             alt={product.name}
-            height="300"
-            width={"350px"}
+            height="250"
+            width={"10px"}
           />
         </div>
         <div className="col-md-6 product-details-info">
@@ -56,9 +57,9 @@ const ProductDetails = () => {
           <h6>Description : {product.description}</h6>
           <h6>
             Price :
-            {product?.price?.toLocaleString("en-US", {
+            {product?.price?.toLocaleString("en-IN", {
               style: "currency",
-              currency: "USD",
+              currency: "INR",
             })}
           </h6>
           <h6>Category : {product?.category?.name}</h6>
@@ -68,9 +69,7 @@ const ProductDetails = () => {
       <hr />
       <div className="row container similar-products">
         <h4>Similar Products ➡️</h4>
-        {relatedProducts.length < 1 && (
-          <p className="text-center">No Similar Products found</p>
-        )}
+        {relatedProducts.length < 1 &&(<p className="text-center">No Similar Products found</p>)}
         <div className="d-flex flex-wrap">
           {relatedProducts?.map((p) => (
             <div className="card m-2" key={p._id}>
@@ -83,9 +82,9 @@ const ProductDetails = () => {
                 <div className="card-name-price">
                   <h5 className="card-title">{p.name}</h5>
                   <h5 className="card-title card-price">
-                    {p.price.toLocaleString("en-US", {
+                    {p.price.toLocaleString("en-IN", {
                       style: "currency",
-                      currency: "USD",
+                      currency: "INR",
                     })}
                   </h5>
                 </div>
@@ -99,19 +98,6 @@ const ProductDetails = () => {
                   >
                     More Details
                   </button>
-                  {/* <button
-                  className="btn btn-dark ms-1"
-                  onClick={() => {
-                    setCart([...cart, p]);
-                    localStorage.setItem(
-                      "cart",
-                      JSON.stringify([...cart, p])
-                    );
-                    toast.success("Item Added to cart");
-                  }}
-                >
-                  ADD TO CART
-                </button> */}
                 </div>
               </div>
             </div>

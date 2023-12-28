@@ -1,13 +1,10 @@
-.banner-img {
-    margin-top: 60px;
-}
-
 .home-page h1 {
     color: gray;
     font-family: "Playfair Display", serif;
 }
 
 .home-page {
+    margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -53,7 +50,7 @@
 filters
 ============== */
 .filters h4 {
-    margin-top: 100px;
+    margin-top: 60px;
     color: gray !important;
     border-bottom: 1px solid rgba(128, 128, 128, 0.337);
 }
@@ -83,4 +80,8 @@ filters
     color: green;
     font-weight: bold;
     font-size: 20px !important;
+}
+
+.cool {
+    margin-top: 60px;
 }
